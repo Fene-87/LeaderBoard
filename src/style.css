@@ -1,3 +1,84 @@
-.hello {
-    color: red;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 20px;
+}
+
+.page-title {
+  margin-top: 30px;
+}
+
+main {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+}
+
+.recent-scores {
+  width: 400px;
+}
+
+.scores-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scores-title > h3 {
+  font-size: 25px;
+}
+
+.scores-title > button {
+  padding: 10px;
+}
+
+.scores {
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  margin-top: 10px;
+}
+
+.scores-row {
+  padding: 10px;
+}
+
+.gray-bg {
+  background-color: #d3d3d3;
+}
+
+.add-scores {
+  width: 400px;
+}
+
+.add-scores > h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.scores-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scores-form > label {
+  display: none;
+}
+
+.scores-form > input {
+  height: 25px;
+  padding: 10px;
+}
+
+.submit-btn {
+  width: 100px;
+  padding: 10px;
+  align-self: flex-end;
+}
