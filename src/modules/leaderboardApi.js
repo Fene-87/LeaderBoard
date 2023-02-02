@@ -1,3 +1,5 @@
+import displayScores from "./scoresList";
+
 const leaderboardApiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Y1TD0RjuZc42U3UOxmR0/scores';
 
 export const postScore = async (user, score) => {
@@ -6,17 +8,18 @@ export const postScore = async (user, score) => {
     const postedScore = await fetch(leaderboardApiUrl, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json;',
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify(
           {
-              user: user, 
-              score: score
+              user: userName, 
+              score: userScore
           }
         )
     }) 
 
-    return postedScore.json();
+    const userScores = await postedScore.json();
+    return userScores.result;
 
 }
 
@@ -30,3 +33,19 @@ export const getScores = async () => {
     return allScores.json();
 }
 
+
+
+/*const payload = {
+    user,
+    score: parseInt(score),
+  };
+  fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Y1TD0RjuZc42U3UOxmR0/scores',
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    },
+  );*/

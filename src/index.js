@@ -1,24 +1,23 @@
 import './style.css';
 import { postScore, getScores } from './modules/leaderBoardApi';
+import displayScores from './modules/scoresList';
 
 
 const scoreBoard = document.querySelector('.scores')
 
-// document.addEventListener('DOMContentLoaded', displayScores)
-document.querySelector('.scores-form').addEventListener('submit', (event) => {
+document.querySelector('.scores-form').addEventListener('submit', async (event) => {
     const userName = document.querySelector('.user-name').value
     const userScore = document.querySelector('.user-score').value
     event.preventDefault()
-    postScore(userName, parseInt(userScore));
+    await postScore()
     
 })
 
-const updateScore = () => {
-    const fetchApi = getScores();
-    console.log(fetchApi)
-}
-
-document.querySelector('.refresh-btn').addEventListener('click', () => {
-    updateScore()
+document.querySelector('.refresh-btn').addEventListener('click', async () => {
+    const fetchApi = await getScores();
+    const results = fetchApi.result
+    console.log(results)
+    displayScores(results)
+    
 })
 
