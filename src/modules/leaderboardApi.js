@@ -32,20 +32,3 @@ export const getScores = async () => {
     })
     return allScores.json();
 }
-
-
-
-/*const payload = {
-    user,
-    score: parseInt(score),
-  };
-  fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Y1TD0RjuZc42U3UOxmR0/scores',
-    {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    },
-  );*/
