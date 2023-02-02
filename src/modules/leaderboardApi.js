@@ -1,6 +1,6 @@
 const leaderboardApiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Y1TD0RjuZc42U3UOxmR0/scores';
 
-export const postScore = async () => {
+export const postScore = async (user, score) => {
     const userName = document.querySelector('.user-name').value
     const userScore = document.querySelector('.user-score').value
     const postedScore = await fetch(leaderboardApiUrl, {
@@ -8,10 +8,12 @@ export const postScore = async () => {
         headers: {
             'Content-Type': 'application/json;',
         },
-        body: JSON.stringify({
-            user: userName,
-            score: userScore
-        })
+        body: JSON.stringify(
+          {
+              user: user, 
+              score: score
+          }
+        )
     }) 
 
     return postedScore.json();
