@@ -64,7 +64,7 @@
 
 Click on the link to view the LeaderBoard website.
 
-- [Live Demo]( https://fene-87.github.io/LeaderBoard/)
+- [Live Demo]( https://fene-87.github.io/LeaderBoard/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
