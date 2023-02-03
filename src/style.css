@@ -5,23 +5,43 @@
 
 body {
   padding: 0 20px;
-}
-
-.page-title {
-  margin-top: 30px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
   gap: 20px;
   width: 100%;
   max-width: 1200px;
-  padding: 10px;
+  padding: 10px 50px;
+  background-color: #003580;
+  min-height: 38rem;
+  border: 3px solid #febb02;
+  border-radius: 10px;
+}
+
+.page-title {
+  margin-top: 30px;
+  align-self: flex-start;
+  color: #fff;
+  font-family: 'lato', sans-serif;
+  font-size: 45px;
+}
+
+.game-container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .recent-scores {
-  width: 400px;
+  width: 40%;
 }
 
 .scores-title {
@@ -33,16 +53,29 @@ main {
 
 .scores-title > h3 {
   font-size: 25px;
+  color: #fff;
+  font-family: 'lato', sans-serif;
 }
 
 .scores-title > button {
   padding: 10px;
+  background-color: #0071c2;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .scores {
   width: 100%;
-  border: 1px solid #d3d3d3;
+  border: 3px solid #febb02;
+  border-radius: 5px;
   margin-top: 10px;
+  max-height: 400px;
+  background-color: #fff;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .scores-row {
@@ -54,18 +87,20 @@ main {
 }
 
 .add-scores {
-  width: 400px;
+  width: 40%;
 }
 
 .add-scores > h3 {
   font-size: 25px;
   margin-bottom: 20px;
+  color: #fff;
+  font-family: 'lato', sans-serif;
 }
 
 .scores-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
 
 .scores-form > label {
@@ -75,10 +110,19 @@ main {
 .scores-form > input {
   height: 25px;
   padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
 }
 
 .submit-btn {
   width: 100px;
   padding: 10px;
   align-self: flex-end;
+  background-color: #0071c2;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
