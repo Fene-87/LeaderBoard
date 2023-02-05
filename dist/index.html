@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css">
     <title>LeaderBoard</title>
 <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
 <body>
-    <h1 class="page-title">Leaderboard</h1>
     <main>
-        <section class="recent-scores">
-            <div class="scores-title">
-                <h3>Recent Scores</h3>
-                <button type="button" class="refresh-btn">Refresh</button>
+        <h1 class="page-title">Leaderboard</h1>
+        <section class="game-container">
+            <div class="recent-scores">
+                <div class="scores-title">
+                    <h3>Recent Scores</h3>
+                    <button type="button" class="refresh-btn">Refresh</button>
+                </div>
+                <div class="scores"></div>
             </div>
-            <div class="scores">
 
+            <div class="add-scores">
+                <h3>Add your score</h3>
+                <form action="" class="scores-form">
+                    <label for="">name</label>
+                    <input type="text" placeholder="Your name" class="user-name" required>
+
+                    <label for="">score</label>
+                    <input type="number" placeholder="Your score" class="user-score" required>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
             </div>
-        </section>
-
-        <section class="add-scores">
-            <h3>Add your score</h3>
-            <form action="" class="scores-form">
-                <label for="">name</label>
-                <input type="text" placeholder="Your name" class="user-name" required>
-
-                <label for="">score</label>
-                <input type="number" placeholder="Your score" class="user-score" required>
-
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
         </section>
     </main>
 </body>
